@@ -1,0 +1,20 @@
+/**
+ * 
+ * @authors yuqiu (yuqiu_xa@netposa.com)
+ * @date    2015-04-10 15:20:23
+ * @version $Id$
+ */
+
+var marked = require('marked');
+marked.setOptions({
+  renderer: new marked.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: true,
+  smartLists: true,
+  smartypants: false
+});
+
+console.log(marked('I am using __markdown__.'));

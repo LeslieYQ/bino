@@ -1,0 +1,46 @@
+{
+  "name": "bino",
+  "version": "0.1.0",
+  "description": "A fast, simple & powerful blog framework, powered by Node.js.",
+  "main": "lib/hexo",
+  "bin": {
+    "hexo": "./bin/hexo"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LeslieYQ/bino"
+  },
+  "homepage": "http://leslieyq.com/",
+  "keywords": [
+    "website",
+    "blog",
+    "cms",
+    "framework",
+    "bino",
+    "leslieyq"
+  ],
+  "author": {
+    "name": "leslie YQ",
+    "email": "yuqiu-1988@163.com",
+    "url": "http://leslieyq.com/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.9.8",
+    "through2": "^1.1.1",
+    "marked": "^0.3.2"
+  },
+  "readme": "#Bino new blog",
+  "readmeFilename": "README.md",
+  "_id": "Bino@0.1.0"
+}
