@@ -9,14 +9,21 @@ var through2 = require('through2');
 var path = require('path');
 var Readable = require('stream').Readable;
 var translatedMd = require('./mark');
+var gutil = require('gulp-util');
 
 
 function readMd(){
 	var onData = function(file, encoding, cb) {
 		var fileContent = file.contents.toString();
+		var fileName = path.relative(file.base, file.path).split('.')[0];
 		var newFile = translatedMd(fileContent);
-		this.push(newFile);
-		console.log(this._readableState.buffer.toString());
+		var mdFile = new gutil.File({
+        	path: fileName + '.html',
+        	contents: new Buffer(newFile.contents.toString())
+     	 });
+		this.push(mdFile);
+		//console.log(newFile);
+		//console.log(this.contents);
 		cb();
 	};
 

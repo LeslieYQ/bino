@@ -13,6 +13,4 @@ gulp.task('marked', function(){
 	
 });
 
-var file = gulp.src('_post/*.md').pipe(readMd());
-
-console.log(file.contents)
+gulp.src('_post/*.md').pipe(readMd()).pipe(gulp.dest('publish/'));
