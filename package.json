@@ -2,16 +2,8 @@
   "name": "bino",
   "version": "0.1.0",
   "description": "A fast, simple & powerful blog framework, powered by Node.js.",
-  "main": "lib/hexo",
-  "bin": {
-    "hexo": "./bin/hexo"
-  },
   "scripts": {
     "test": "gulp test"
-  },
-  "directories": {
-    "lib": "./lib",
-    "bin": "./bin"
   },
   "engines": {
     "node": ">= 0.12.0"
@@ -41,7 +33,8 @@
     "koa": "^0.17.0",
     "marked": "^0.3.2",
     "gulp-util" : "latest",
-    "gulp" : "^3.8.11"
+    "gulp" : "^3.8.11",
+    "dot" : "latest"
   },
   "readme": "#Bino new blog",
   "readmeFilename": "README.md",

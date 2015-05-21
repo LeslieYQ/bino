@@ -8,9 +8,6 @@
 
 var gulp = require('gulp');
 var readMd = require('./readMd');
+var addHeader = require('./dot');
 
-gulp.task('marked', function(){
-	
-});
-
-gulp.src('_post/*.md').pipe(readMd()).pipe(gulp.dest('publish/'));
+gulp.src('_post/*.md').pipe(readMd()).pipe(addHeader()).pipe(gulp.dest('publish/'));

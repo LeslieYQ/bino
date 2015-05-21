@@ -7,7 +7,6 @@
 
 var through2 = require('through2');
 var path = require('path');
-var Readable = require('stream').Readable;
 var translatedMd = require('./mark');
 var gutil = require('gulp-util');
 
