@@ -7,18 +7,21 @@
 
 var through2 = require('through2');
 var gutil = require('gulp-util');
-var dots = require("dot").process({path: "./themes/views"});
+var nunjucks = require("nunjucks");
+nunjucks.configure('themes/views', { autoescape: true });
 
-function addHeader(){
+function renderArticle(){
 	var onData = function(file, encoding, cb) {
 		var fileContent = file.contents.toString();
-		var header = dots.head({author: "yuqiu", description: "blog system"}) + '\n';
-		var foot = dots.foot();
-		var newFile = header.concat(fileContent,foot);
+		var newFile = nunjucks.render('article/index.html',{
+			author: 'yuqiu',	
+			description: 'hahah',
+			article: fileContent
+		});
 		var mdFile = new gutil.File({
-			path: file.path,
+			path: file.path,	
         	contents: new Buffer(newFile)
-     	 });
+     	 });	
 		this.push(mdFile);
 		cb();
 	};
@@ -31,5 +34,5 @@ function addHeader(){
 	return retStream;
  }
 
-module.exports = addHeader;
+module.exports = renderArticle;
 

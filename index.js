@@ -4,10 +4,10 @@
  * @date    2015-04-15 22:05:53
  * @version $Id$
  */
+var exec =  require('child_process').exec;
 
-
-var gulp = require('gulp');
-var readMd = require('./readMd');
-var addHeader = require('./dot');
-
-gulp.src('_post/*.md').pipe(readMd()).pipe(addHeader()).pipe(gulp.dest('publish/'));
+exec('gulp article', function(err){
+	if(err){
+		console.log(err);
+	}
+})

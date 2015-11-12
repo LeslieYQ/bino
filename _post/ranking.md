@@ -1,4 +1,4 @@
-title: 插件ranking （二）
+title: 插件ranking （一二）
 date: 2014-07-01 22:50:27
 tags: jquery plugin
 ---

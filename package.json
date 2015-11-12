@@ -30,11 +30,12 @@
   "dependencies": {
     "bluebird": "^2.9.8",
     "through2": "^1.1.1",
-    "koa": "^0.17.0",
     "marked": "^0.3.2",
     "gulp-util" : "latest",
     "gulp" : "^3.8.11",
-    "dot" : "latest"
+    "nunjucks" : "latest",
+    "gulp-clean": "latest",
+    "gulp-load-plugins": "latest"
   },
   "readme": "#Bino new blog",
   "readmeFilename": "README.md",
